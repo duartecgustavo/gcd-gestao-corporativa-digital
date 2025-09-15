@@ -1,6 +1,6 @@
-# 🏢 Gerenciador de Empresas - Frontend
+# 🏢 GCD - Gestão Corporativa Digital - Frontend
 
-Este é o **frontend** do projeto **Gerenciador de Empresas**, desenvolvido com **React**, **TypeScript** e **Vite**.  
+Este é o **frontend** do projeto **Gestão Corporativa Digital**, desenvolvido com **React**, **TypeScript** e **Vite**.  
 O objetivo é fornecer uma interface amigável e intuitiva para gerenciar empresas, permitindo **criar, editar, visualizar e excluir** informações.
 
 ---
@@ -19,7 +19,7 @@ O objetivo é fornecer uma interface amigável e intuitiva para gerenciar empres
 # 📂 Estrutura do Projeto
 
 ```plaintext
-gerenciador-empresas-front/
+gestao-corporativa-digital/
 ├── src/
 │   ├── components/
 │   │   ├── shared/
