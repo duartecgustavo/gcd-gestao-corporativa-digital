@@ -258,7 +258,7 @@ export default function TelaListagemDeEmpresas() {
       <Flex gap="middle" vertical>
         <Flex justify="space-between" align="center">
           <Title level={2} style={{ margin: 0 }}>
-            GCS - Gestão Corporativa Simples
+            GCD - Gestão Corporativa Digital
           </Title>
           <Button
             icon={<ReloadOutlined />}
