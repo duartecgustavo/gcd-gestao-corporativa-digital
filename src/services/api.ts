@@ -5,16 +5,7 @@ import type {
   IAtualizarEmpresa,
   ICriarEmpresa,
 } from "../interfaces/empresa.interface";
-
-interface IRespotaEmpresa {
-  id: number;
-  nome: string;
-  cnpj: string;
-  nomeFantasia: string;
-  endereco: string;
-  criadoEm: string;
-  alteradoEm: string;
-}
+import type { IRespostaEmpresa } from "./api.interface";
 
 const handleApiError = (error: AxiosError, defaultMessage: string) => {
   console.error(error.response?.data || error.message);
@@ -23,8 +14,13 @@ const handleApiError = (error: AxiosError, defaultMessage: string) => {
   );
 };
 
+const baseURL =
+  import.meta.env.MODE === "production"
+    ? import.meta.env.VITE_API_URL_PROD
+    : import.meta.env.VITE_API_URL;
+
 const api = axios.create({
-  baseURL: "http://192.168.0.11:3000/",
+  baseURL,
   timeout: 10000,
 });
 
@@ -35,7 +31,7 @@ export const buscarEmpresas = async (pagina: number, limite: number) => {
 
 export const criarEmpresa = async (
   empresa: ICriarEmpresa
-): Promise<IRespotaEmpresa | undefined> => {
+): Promise<IRespostaEmpresa | undefined> => {
   try {
     const response = await api.post("/empresas", empresa);
     return response.data;
